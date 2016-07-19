@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provider 'virtualbox' do |v|
         v.linked_clone = true 
         v.cpus = 2
-        v.memory = 1024
+        v.memory = 2048
     end
     
     config.vm.network "private_network", type: "dhcp"

@@ -7,7 +7,7 @@ $script = <<SCRIPT
 
 set -e -x
 
-sudo dnf -y install tmux htop
+time sudo dnf -y install tmux htop strace | tee
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provider :libvirt do |libvirt|
         libvirt.driver = "qemu"
         libvirt.cpus = 2
-        libvirt.memory = 512
+        libvirt.memory = 1024
         libvirt.volume_cache = 'unsafe'
     end
 
