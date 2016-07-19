@@ -4,7 +4,6 @@ set -x -e
 
 # http://linuxsimba.com/vagrant-libvirt-install
 apt-get -qq update 
-apt-get -y dist-upgrade
 apt-get -y install jq curl qemu-kvm libvirt-bin libvirt-dev htop tmux libxslt-dev libxml2-dev libvirt-dev zlib1g-dev ruby-dev  qemu-utils libvirt-dev
 # https://github.com/mitchellh/vagrant-installers/issues/12
 #LATEST_VAGRANT=$(curl -s https://releases.hashicorp.com/vagrant/index.json | jq --raw-output '.versions | to_entries | max_by(.key) | .value.builds | .[] | select(.arch=="x86_64") | select(.os=="debian") | .url ')
