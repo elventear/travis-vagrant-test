@@ -7,7 +7,7 @@ $script = <<SCRIPT
 
 set -e -x
 
-sudo dnf install -y tmux htop
+sudo dnf -y install tmux htop
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
